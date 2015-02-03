@@ -1,4 +1,5 @@
 TheRails3::Application.routes.draw do
+  devise_for :users
   root to: 'welcome#index'
 
   TheRoleManagementPanel::Routes.mixin(self)
@@ -17,6 +18,7 @@ TheRails3::Application.routes.draw do
       get :manage
     end
   end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
